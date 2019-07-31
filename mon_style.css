@@ -14,7 +14,7 @@
 	width : 100%;
 	display: flex;
 	align-items : center;
-
+	background-color: lightgray;
 }
 .conteneur2 {
 	margin : auto;
