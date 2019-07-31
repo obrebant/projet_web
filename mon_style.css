@@ -20,7 +20,7 @@
 	margin : auto;
 	width : 80%;
 	height : 350px;
-	border : solid 2px blue;
+	border : solid 5px blue;
 	display : flex;
 	flex-wrap : wrap;
 	flex-direction : column;
