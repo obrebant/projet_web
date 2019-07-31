@@ -1,0 +1,48 @@
+#title {
+	font-size: 3em;
+	text-align: center;
+	flex : 8 1 auto;
+	border: solid 2px blue;
+}
+#infos {
+	border: solid 2px blue;
+	/*width : 10%;*/
+	flex : 2 1 auto;
+	text-align: center;
+}
+.conteneur1 {
+	width : 100%;
+	display: flex;
+	align-items : center;
+
+}
+.conteneur2 {
+	margin : auto;
+	width : 80%;
+	height : 350px;
+	border : solid 2px blue;
+	display : flex;
+	flex-wrap : wrap;
+	flex-direction : column;
+	justify-content : space-around;
+	align-items : center;
+}
+
+.effets {
+	width : 40%;
+	height : 100px;
+	text-align: center;
+	line-height: 100px;
+	background-color: lightblue;
+	border-radius: 15px;
+}
+
+.conteneur3 {
+	display : flex;
+	justify-content : space-around;
+}
+
+.conteneur3d {
+	width : 50%;
+	border : solid 1px;
+}
