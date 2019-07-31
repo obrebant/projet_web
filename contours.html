@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Picture effects</title>
+<!-- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> 
+-->
+    <link rel="stylesheet" type="text/css" href="mon_style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			/*$(".effets").mouseenter(function() {
+				$(this).css("width","+=15px");
+				$(this).css("height","+=15px");
+				
+			});
+			$(".effets").mouseleave(function() {
+				$(this).css("width","-=15px");
+				$(this).css("height","-=15px");
+			})*/
+			$(".effets").mouseenter(function() {
+				$(this).css("border","solid red 2px");
+			});
+			$(".effets").mouseleave(function() {
+				$(".effets").css("border","0px");
+			});
+		});
+	</script>
+  </head>
+  <body>
+  	<header> 
+  		<div class="conteneur1">
+			<div id="title">Effet détection de contours</div>
+			<div id="infos">Retour </br> Accueil</div>
+		</div>
+	</header>
+	<p> Voici une présentation de l'effet détection de contours</p>
+
+	<div class="conteneur3">
+		<div class="conteneur3g">
+			<p>Cliquer sur une vignette pour l'agrandir...</p>
+			<img src="images/doronic1600x1000_thumb.jpg" width="200px" alt="doronic du caucase"/>
+			<img src="images/doronic1600x1000_contours_thumb.jpg" width="200px"/>
+		</div>
+		<div class="conteneur3d">
+			Python
+			<!-- le code python dans un frame avec éventuellement ascenseur -->
+		</div>
+		
+	</div>
+
+  
+  </body>
+</html>
