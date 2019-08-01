@@ -8,27 +8,33 @@
     
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> 
 -->
-    <link rel="stylesheet" type="text/css" href="mon_style.css">
+	<link rel="stylesheet" type="text/css" href="mon_style.css">
+	<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 	<script type="text/javascript">
 		$(function(){
-			/*$(".effets").mouseenter(function() {
-				$(this).css("width","+=15px");
-				$(this).css("height","+=15px");
-				
+			$(".vignette").click(function() {
+				$("#visionneur img").attr("src",$(this).attr('id'));
+				$("#visionneur").fadeIn(1000);
 			});
-			$(".effets").mouseleave(function() {
-				$(this).css("width","-=15px");
-				$(this).css("height","-=15px");
-			})*/
-			$(".effets").mouseenter(function() {
-				$(this).css("border","solid red 2px");
+			$("#visionneur img").click(function() {
+				$("#visionneur").fadeOut(1000);
 			});
-			$(".effets").mouseleave(function() {
-				$(".effets").css("border","0px");
+			$(".vignette").mouseenter(function() {
+				$(this).css("border","solid black 2px");
+			});
+			$(".vignette").mouseleave(function() {
+				$(this).css("border","solid white 2px");
 			});
 		});
 	</script>
+
   </head>
   <body>
   	<header> 
@@ -42,16 +48,37 @@
 	<div class="conteneur3">
 		<div class="conteneur3g">
 			<p>Cliquer sur une vignette pour l'agrandir...</p>
-			<img src="images/doronic1600x1000_thumb.jpg" width="200px" alt="doronic du caucase"/>
-			<img src="images/doronic1600x1000_contours_thumb.jpg" width="200px"/>
+			<img class = "vignette" id = "images/doronic1600x1000.jpg" src="images/doronic1600x1000_thumb.jpg" width="200px" alt="doronic du caucase"/>
+			<img class = "vignette" id = "images/doronic1600x1000_contours.jpg" src="images/doronic1600x1000_contours_thumb.jpg" width="200px"/>
 		</div>
 		<div class="conteneur3d">
-			Python
+			Voilà un exemple de code Python pour obtenir ce résultat :
 			<!-- le code python dans un frame avec éventuellement ascenseur -->
+			<pre><code>def contour(image0):
+    """ reçoit une image (couleur ou niveaux de gris) et renvoie
+    l'image noir et blanc avec la mise en évidence des contours"""
+
+    width, height = image0.size
+    image1 = Image.new('L',(width,height),0)
+    datas = image0.load()
+    seuil = 30 # réglage du seuil de "contraste"
+    d = image1.load()
+    for l in range(height-1):
+        for c in range(width-1):
+            if distance(datas[c,l],datas[c+1,l])>seuil or distance(datas[c,l],datas[c,l+1])>seuil :
+                d[c,l]=0
+            else :
+                d[c,l]=255
+
+    return image1
+			</code></pre>
 		</div>
 		
 	</div>
 
+	<div id="visionneur">
+		<img src=# />
+	</div>
   
   </body>
 </html>

@@ -38,11 +38,39 @@
 }
 
 .conteneur3 {
+	border : solid 1px;
 	display : flex;
 	justify-content : space-around;
 }
 
 .conteneur3d {
-	width : 50%;
+	width : 40%;
 	border : solid 1px;
+	overflow : auto;
+}
+
+.conteneur3g {
+	width : 40%;
+	border : solid 1px;
+}
+
+#visionneur {
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	position: absolute;
+	left : 0px;
+	right : 0px;
+	top : 10px;
+	bottom : 0px;
+	display : none;
+}
+
+#visionneur img {
+	margin-top: 50vh;
+	transform: translateY(-50%);
+	border : solid 5px black;
+}
+
+pre {
+	overflow : auto;
 }
