@@ -9,12 +9,16 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> 
 -->
 	<link rel="stylesheet" type="text/css" href="mon_style.css">
+	<!--
 	<link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+	-->
 
-    
+	<link href="prism.css" rel="stylesheet" />
+	<script src="prism.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 	<script type="text/javascript">
@@ -36,14 +40,14 @@
 	</script>
 
   </head>
-  <body>
+  <body class="line-numbers">
   	<header> 
   		<div class="conteneur1">
 			<div id="title">Effet détection de contours</div>
-			<div id="infos">Retour </br> Accueil</div>
+			<div id="infos"><a href="accueil.html">Retour </br> Accueil</a></div>
 		</div>
 	</header>
-	<p> Voici une présentation de l'effet détection de contours</p>
+	<p> On trouve sur cette page une présentation de l'effet détection de contours</p>
 
 	<div class="conteneur3">
 		<div class="conteneur3g">
@@ -52,9 +56,9 @@
 			<img class = "vignette" id = "images/doronic1600x1000_contours.jpg" src="images/doronic1600x1000_contours_thumb.jpg" width="200px"/>
 		</div>
 		<div class="conteneur3d">
-			Voilà un exemple de code Python pour obtenir ce résultat :
+			Voilà un exemple d'une fonction <em>Python</em> pour obtenir ce résultat :
 			<!-- le code python dans un frame avec éventuellement ascenseur -->
-			<pre><code>def contour(image0):
+			<pre><code class="language-python">def contour(image0):
     """ reçoit une image (couleur ou niveaux de gris) et renvoie
     l'image noir et blanc avec la mise en évidence des contours"""
 
