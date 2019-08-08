@@ -1,12 +1,25 @@
+body{
+	background-color:#FFFFFF;
+}
 #title {
+	padding: 20px;
+	/*border:10px solid blue;*/
+	font-family:arial;
+	color : #FFFFFF;
+	background-color:#00A080;
 	font-size: 3em;
 	text-align: center;
 	flex : 8 1 auto;
-	border: solid 2px blue;
+	/*border: solid 2px blue;*/
 }
 #infos {
-	border: solid 2px blue;
+	font-family:arial ;
+	font-style: italic;
+	font-size: 1em;
+	border: solid 2px #FFF;
 	/*width : 10%;*/
+	color : #FFFFFF;
+	background-color:#00A080;
 	flex : 2 1 auto;
 	text-align: center;
 }
@@ -14,13 +27,20 @@
 	width : 100%;
 	display: flex;
 	align-items : center;
-	background-color: lightgray;
+	background-color: #00AAFF;
+}
+.conteneur1bis {
+	font-family:arial;
+	font-size: 2em;
+	color: #00A080;
+	text-align : center;
+		
 }
 .conteneur2 {
 	margin : auto;
 	width : 80%;
 	height : 350px;
-	border : solid 5px blue;
+	/*border : solid 5px blue;*/
 	display : flex;
 	flex-wrap : wrap;
 	flex-direction : column;
@@ -28,13 +48,17 @@
 	align-items : center;
 }
 
+
 .effets {
-	width : 40%;
-	height : 100px;
+	width : 30%;
+	height : 150px;
 	text-align: center;
-	line-height: 100px;
-	background-color: lightblue;
-	border-radius: 15px;
+	line-height: 150px;
+	background-color: #008080;
+	border-radius: 50px;
+	color : #FFFFFF;
+	font-size : 1.5em;
+	
 }
 
 .conteneur3 {
